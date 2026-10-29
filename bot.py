@@ -7785,9 +7785,9 @@ ORE_GIORNO = set(range(8, 24)) | {0, 1}   # 08:00-23:59 + 00:00-01:59 -> modalit
 
 def calcola_aperture_per_ora(ora):
     if ora in ORE_GIORNO:
-        return random.randint(30, 60), "GIORNO"
+        return random.randint(45, 100), "GIORNO"
     else:
-        return random.randint(5, 15), "NOTTE"
+        return random.randint(15, 30), "NOTTE"
 
 def genera_offset_randomici(n_aperture, durata_secondi=3300):
     return sorted(random.sample(range(0, durata_secondi), n_aperture))
